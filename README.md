@@ -1,123 +1,218 @@
-# 👋 Hey, I'm Pabitra Panda
+<div align="center">
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=23&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=650&lines=Machine+Learning+Enthusiast;Python+Developer;Exploring+Artificial+Intelligence;Building+Ideas+Into+Real+Projects" alt="Typing SVG" />
-</p>
+```text
+┌────────────────────────────────────┐
+│  FIELD NOTES // VISION LAB         │
+│  ────────────────────────────────  │
+│  operator   Pabitra Panda          │
+│  base       Bhubaneswar, India     │
+│  focus      AI · ML · Vision       │
+│  status     building, logging      │
+└────────────────────────────────────┘
+```
 
-<p align="center">
-  <a href="https://github.com/PabitraPanda05">
-    <img src="https://img.shields.io/badge/GitHub-PabitraPanda05-161B22?style=for-the-badge&logo=github" />
-  </a>
-  <img src="https://img.shields.io/badge/MCA-Student-8957E5?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Focus-AI%20%26%20ML-238636?style=for-the-badge" />
-</p>
+# Pabitra Panda
+
+**I build systems that look at the world and say something useful about it.**
+
+<sub>MCA · Artificial Intelligence · Machine Learning · Computer Vision · Data Science</sub>
+
+<br>
+
+[`Experiments`](#-01--experiments) · [`Instruments`](#-02--instruments) · [`Background`](#-03--background) · [`Contact`](#-04--signal)
+
+</div>
+
+<br>
 
 ---
 
-### ✦ About Me
+## ▍00 · Abstract
 
-I'm an MCA student passionate about **Artificial Intelligence, Machine Learning, Deep Learning, and Software Development**.
+> I teach machines to look at crowds, at power lines, at the air, and to turn what they see into decisions people can act on.
 
-I love experimenting with new technologies and building practical projects that solve real-world problems.
+I'm an MCA student and aspiring **AI/ML Engineer** who likes the full path from raw signal to working interface: collecting and cleaning data, training models, and wrapping them in something a person can use. These notes document the experiments I'm most proud of, plus the tools I work with.
 
-- 🎓 Master of Computer Applications (MCA)
-- 🧠 Interested in Machine Learning & Computer Vision
-- 💻 Working primarily with Python
-- 🔬 Exploring Deep Learning and intelligent automation
-- 🚀 Always learning, experimenting, and building
+**Currently aiming for:** AI/ML Engineer · Python Developer · Software Developer roles.
+
+<br>
 
 ---
 
-### ✦ What I'm Building
+## ▍01 · Experiments
+
+Three entries from the lab log, each following a **signal → model → decision** pipeline.
+
+<br>
+
+### ◉ EXP-01 &nbsp;/&nbsp; CrowdShield AI
+
+**Intelligent Multimodal Crowd Monitoring and Safety System**
+
+A crowd-safety platform that detects people, tracks their movement, estimates crowd density, and flags risky situations. It supports operators through a web dashboard and a mobile app.
+
+```mermaid
+flowchart LR
+    A[Camera feed] --> B[YOLOv8<br/>detect]
+    B --> C[ByteTrack<br/>track]
+    C --> D[CSRNet<br/>density]
+    D --> E[LSTM / ConvLSTM<br/>temporal model]
+    E --> F[Risk alerts]
+    F --> G[React dashboard]
+    F --> H[Flutter app]
+```
+
+<details>
+<summary><b>Stack & architecture notes</b></summary>
+
+<br>
+
+| Layer | Tools |
+| :-- | :-- |
+| Vision & models | `YOLOv8` · `ByteTrack` · `CSRNet` · `LSTM / ConvLSTM` |
+| Backend | `Python` · `FastAPI` · `Spring Boot` |
+| Interfaces | `React` (dashboard) · `Flutter` (mobile) |
+| Data | `PostgreSQL` · `Redis` |
+
+</details>
+
+<!-- Add the repository link here when it is public:
+**Repository:** [PabitraPanda05/CrowdShield-AI](https://github.com/PabitraPanda05/CrowdShield-AI) -->
+
+<br>
+
+### ◉ EXP-02 &nbsp;/&nbsp; VoltVision AI
+
+**AI-Powered Power Line Inspection and Automated Defect Detection**
+
+A deep learning system for inspecting power line components and detecting defects automatically, meant to take some of the repetitive visual checking out of infrastructure inspection.
+
+```mermaid
+flowchart LR
+    A[Inspection image] --> B[ResNet-50 FPN<br/>backbone]
+    B --> C[Faster R-CNN<br/>detection]
+    C --> D[Components<br/>and defects]
+    D --> E[Streamlit<br/>interface]
+```
+
+<details>
+<summary><b>Stack</b></summary>
+
+<br>
+
+`Python` · `PyTorch` · `Faster R-CNN` · `ResNet-50 FPN` · `OpenCV` · `Streamlit`
+
+</details>
+
+**Repository:** [PabitraPanda05/VoltVision-AI](https://github.com/PabitraPanda05/VoltVision-AI)
+
+<br>
+
+### ◉ EXP-03 &nbsp;/&nbsp; AirGuard AI 2.0
+
+**Machine Learning Framework for Air Pollution Detection and AQI Category Prediction**
+
+A classical ML workflow that studies air-quality data and predicts AQI categories, with visual analysis alongside the models.
+
+```mermaid
+flowchart LR
+    A[Air quality data] --> B[Pandas / NumPy<br/>preparation]
+    B --> C[Scikit-learn<br/>models]
+    C --> D[AQI category<br/>prediction]
+    B --> E[Data<br/>visualization]
+```
+
+<details>
+<summary><b>Stack</b></summary>
+
+<br>
+
+`Python` · `Pandas` · `NumPy` · `Scikit-learn` · `Machine Learning` · `Data Visualization`
+
+</details>
+
+**Repository:** [PabitraPanda05/AirGuard-AI-2.0](https://github.com/PabitraPanda05/AirGuard-AI-2.0)
+
+<br>
+
+---
+
+## ▍02 · Instruments
+
+These are the tools I use and am growing with. They're listed by category, not ranked by mastery.
 
 <table>
-<tr>
-<td width="50%">
-<h3>🛡️ CrowdShield AI</h3>
-<p>Intelligent multimodal crowd monitoring and safety system using computer vision, object tracking, and AI-powered risk assessment.</p>
-<strong>Python · YOLO · ByteTrack · FastAPI · React</strong>
-<br/><br/>
-<a href="https://github.com/PabitraPanda05">Explore my GitHub →</a>
-</td>
-<td width="50%">
-<h3>⚡ VoltVision AI</h3>
-<p>Deep learning-based power line inspection and automated defect detection using Faster R-CNN.</p>
-<strong>Python · PyTorch · OpenCV · Streamlit</strong>
-<br/><br/>
-<a href="https://github.com/PabitraPanda05/VoltVision-AI">View Project →</a>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<h3>🌱 AirGuard AI 2.0</h3>
-<p>Machine learning framework for air pollution detection and Air Quality Index (AQI) category prediction.</p>
-<strong>Python · Pandas · Scikit-learn · Machine Learning</strong>
-<br/><br/>
-<a href="https://github.com/PabitraPanda05/AirGuard-AI-2.0">View Project →</a>
-</td>
-</tr>
+  <tr>
+    <td width="50%" valign="top">
+
+**Languages**<br>
+`Python` `Java` `C` `JavaScript`
+
+**Intelligence**<br>
+`Machine Learning` `Deep Learning` `Computer Vision`<br>
+`PyTorch` `Scikit-learn` `OpenCV`<br>
+`YOLO` `Faster R-CNN`
+
+**Data**<br>
+`Pandas` `NumPy` `Matplotlib` `Seaborn` `Plotly`
+
+  </td>
+  <td width="50%" valign="top">
+
+**Interfaces & Services**<br>
+`HTML` `CSS` `JavaScript` `Bootstrap`<br>
+`React` `FastAPI` `Spring Boot`
+
+**Storage**<br>
+`MySQL` `PostgreSQL` `SQLite`
+
+**Workbench**<br>
+`Git` `GitHub` `VS Code` `Jupyter Notebook`<br>
+`Anaconda` `IntelliJ`
+
+  </td>
+  </tr>
 </table>
 
----
-
-### ✦ Tech Arsenal
-
-**Languages**
-
-<p>
-<img src="https://skillicons.dev/icons?i=python,java,c,javascript" />
-</p>
-
-**AI / Machine Learning**
-
-<p>
-<img src="https://skillicons.dev/icons?i=pytorch,opencv,sklearn" />
-</p>
-
-**Development & Tools**
-
-<p>
-<img src="https://skillicons.dev/icons?i=html,css,bootstrap,react,mysql,postgres,git,github,vscode" />
-</p>
+<br>
 
 ---
 
-### ✦ GitHub Overview
+## ▍03 · Background
 
-<p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=PabitraPanda05&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github" />
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PabitraPanda05&layout=compact&theme=github_dark&hide_border=true" />
-</p>
+```text
+MCA            Centurion University of Technology and Management, Bhubaneswar
+B.Sc. (CS)     Vikram Dev University
+CGPA           8.95
+```
 
-<p align="center">
-  <img width="75%" src="https://streak-stats.demolab.com?user=PabitraPanda05&theme=github-dark-blue&hide_border=true" />
-</p>
-
----
-
-### ✦ Contribution Activity
-
-<p align="center">
-  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=PabitraPanda05&bg_color=0d1117&color=58a6ff&line=1f6feb&point=ffffff&area=true&hide_border=true" />
-</p>
+<br>
 
 ---
 
-### ✦ Let's Connect
+## ▍04 · Signal
 
-<p align="center">
-  <a href="mailto:pabitra200369@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://github.com/PabitraPanda05">
-    <img src="https://img.shields.io/badge/GitHub-Follow%20Me-181717?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-</p>
+<div align="center">
 
-<p align="center">
-  <i>"Turning curiosity into code, and ideas into intelligent solutions."</i>
-</p>
+If you're working on something in AI, vision, or applied ML, or just want to compare notes, send a signal.
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:8957e5&height=100&section=footer" />
-</p>
+<br>
+
+[![Email](https://img.shields.io/badge/Email-pabitra200369@gmail.com-1a1a1a?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pabitra200369@gmail.com)
+&nbsp;
+[![GitHub](https://img.shields.io/badge/GitHub-PabitraPanda05-1a1a1a?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PabitraPanda05)
+
+<br>
+
+<sub>▍ end of log · more entries coming ▍</sub>
+
+</div>
+
+<!--
+OPTIONAL: add GitHub stats later, once there's enough activity to show.
+Uncomment and keep it to one widget.
+
+<div align="center">
+  <img height="150" src="https://github-readme-stats.vercel.app/api?username=PabitraPanda05&show_icons=true&hide_border=true&theme=transparent" alt="GitHub stats" />
+</div>
+-->
