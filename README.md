@@ -212,9 +212,9 @@ CURRENT PROGRAM     Master of Computer Applications
 INSTITUTION         Centurion University of Technology
                     and Management, Bhubaneswar
 
-PREVIOUS DEGREE     B.Sc. Computer Science
-UNIVERSITY          Vikram Dev University
-ACADEMIC RESULT     8.95 CGPA
+PREVIOUS DEGREE     B.Sc. Chemistry
+UNIVERSITY          Fakir Mohan University
+ACADEMIC RESULT     6.9 CGPA
 
 ────────────────────────────────────────────────
 CURRENT INTERESTS   AI · ML · Deep Learning
